@@ -9,6 +9,8 @@ Feature: BioRuby.org main page
   In this feature we describe scenarios for a visiting biologist, bioinformatician,
   and (non-bio) Ruby coder.
 
+  For 'news' scenarios, see the main-page-news.feature
+
   Scenario: Visiting biologist
     Given I visit the main BioRuby.org page
     When I view the area for Biology
