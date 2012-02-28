@@ -11,7 +11,7 @@ It is a GSoC proposed project. See http://bioruby.open-bio.org/wiki/Google_Summe
 
 The first step is to write features. [Cucumber](http://cukes.info/)
 is a great tool for turning features into tests. The features can be
-found [here](https://github.com/pjotrp/NA-BioRuby.org/features).
+found [here](https://github.com/pjotrp/NA-BioRuby.org/tree/master/features).
 
 ## Finally
 
