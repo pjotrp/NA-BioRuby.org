@@ -10,7 +10,8 @@ Feature: BioRuby.org main page
   and (non-bio) Ruby coder.
 
   For 'news' scenarios, see the main-page-news.feature. For beautiful code see
-  the main-page-beautiful-code.feature
+  the main-page-beautiful-code.feature. For 'direct-answers' see the
+  main-page-direct-answers.feature.
 
   Scenario: Visiting biologist
     Given I visit the main BioRuby.org page
