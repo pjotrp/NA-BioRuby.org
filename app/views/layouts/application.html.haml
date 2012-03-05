@@ -6,5 +6,24 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
-
+    %div{:style => "height: 2.5em"}
+    .container.main
+      .row
+        .span12
+          .navbar
+            .navbar-inner
+              .container{:style => "width: auto;"}
+                %a.brand{:href => "#"}Bioruby
+                .nav-collapse
+                  %ul.nav.pull-right
+                    %li
+                      %a{:href =>"#"}Documentation
+                    %li  
+                      %a{:href =>"#"}Community
+                    %li  
+                      %a{:href =>"#"}Tutorials
+                    %li  
+                      %a{:href =>"#"}Code
+          = image_tag "code.png"                    
+      = yield
+      
