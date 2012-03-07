@@ -6,8 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %div{:style => "height: 2.5em"}
-    .container.main
+    %div{:class => "container main #{controller.controller_name}"}
       .row
         .span12
           .navbar
@@ -24,6 +23,5 @@
                       %a{:href =>"#"}Tutorials
                     %li  
                       %a{:href =>"#"}Code
-          = image_tag "code.png"                    
       = yield
       
