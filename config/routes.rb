@@ -2,6 +2,16 @@ NABiorubyOrg::Application.routes.draw do
   
   root :to => 'welcome#index'
 
+  match '/contribute' => 'welcome#contribute'
+
+  match '/auth/:provider/callback' => 'sessions#create'
+  match '/sign_in' => 'sessions#new'
+  match '/auth/:provider/callback' => 'sessions#create'
+  match '/sign_out' => 'sessions#destroy'
+
+  resources :users
+  resources :identities
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

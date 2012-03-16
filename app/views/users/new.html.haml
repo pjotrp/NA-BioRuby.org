@@ -1,0 +1,32 @@
+.row.span12
+  = form_tag "/auth/identity/register", class: "form-horizontal" do
+    %fieldset
+      %legend Create a new user account
+      - if @identity && @identity.errors.any?
+        .control-group
+          %h2
+            = pluralize(@identity.errors.count, "error")
+            prohibited this account from being saved:
+          %ul
+            - @identity.errors.full_messages.each do |msg|
+              %li
+                = msg
+      .control-group
+        = label_tag :name, "Real name", class: "control-label"
+        .controls
+          = text_field_tag :name, @identity.try(:name)
+      .control-group
+        = label_tag :email, "Email", class: "control-label"
+        .controls
+          = text_field_tag :email, @identity.try(:email)
+      .control-group
+        = label_tag :password, "Password", class: "control-label"
+        .controls
+          = password_field_tag :password
+      .control-group
+        = label_tag :password_confirmation, "Confirm password", class: "control-label"
+        .controls
+          = password_field_tag :password_confirmation
+      .form-actions
+        = submit_tag "Register", class: "btn btn-primary"
+

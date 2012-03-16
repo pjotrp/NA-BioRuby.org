@@ -1,0 +1,24 @@
+.row
+  .span12
+    = form_tag '/auth/identity/callback', class: "form-horizontal" do
+      %fieldset
+        %legend Sign in
+        .control-group
+          = label_tag :auth_key, "Email", class: "control-label"
+          .controls
+            = text_field_tag :auth_key
+        .control-group
+          = label_tag :password, "Password", class: "control-label"
+          .controls
+            = password_field_tag :password
+        .form-actions
+          = submit_tag "Login", class: "btn btn-primary"
+.row
+  .span6.offset1
+    %p
+      or
+      = link_to "Sign in with GitHub", "/auth/github"
+      or
+      = link_to "Register a new account", new_user_path
+      \.
+

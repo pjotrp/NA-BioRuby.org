@@ -12,7 +12,7 @@
           .navbar
             .navbar-inner
               .container{:style => "width: auto;"}
-                %a.brand{:href => "#"}Bioruby
+                %a.brand{:href => "/"}Bioruby
                 .nav-collapse
                   %ul.nav.pull-right
                     %li
@@ -23,5 +23,12 @@
                       %a{:href =>"#"}Tutorials
                     %li  
                       %a{:href =>"#"}Code
+                    %li
+                      %a{:href =>"/contribute"}Contribute
+                    - if current_user
+                      %li
+                        %a{:href => "/sign_out"}Sign Out
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}", :class => ".row"
       = yield
       
