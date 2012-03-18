@@ -17,6 +17,8 @@ found [here](https://github.com/pjotrp/NA-BioRuby.org/tree/master/features).
 
 Clone this repo and have fun! We are on BioRuby IRC, and on the mailing list.
 
+''The future is bright for BioRuby''
+
 The BioRuby panel
 
 
